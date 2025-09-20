@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 영어 일기장</title>
+    <style>
+
+        @font-face {
+    font-family: 'IsYun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+        body, h1, h2, h3, p, ol, ul{margin: 0;padding: 0;}
+
+        h2{font-size: 2em}
+        p{font-size: 1.2em;}
+
+        html{background-color: #f4f4f9; font-family: 'IsYun'}
+
+        table{border: 2px solid; border-collapse: collapse;}
+        th,td{border:1px solid; padding: 5px 3px}
+
+        .wrap{width: 1500px; margin: auto; padding: 30px 0px; display: flex; }
+
+        .left-panel {flex: 1;
+            display: grid;
+            row-gap: 50px;
+            column-gap: 20px;
+            padding: 50px 70px;
+            background-color: #e9ecef;
+            grid-template-columns: 120px 1fr 5fr;}
+
+        .item{word-break: keep-all;}
+
+        .item:nth-child(2) {grid-column: 2 / 4;
+        grid-row: 1 / 2;}
+        .item:nth-child(4) {grid-column: 2 / 4;
+        grid-row: 2 / 3;}
+        .item:nth-child(5) {grid-column: 1 / 2;
+        grid-row: 3 / 6;}
+
+        .tip{background-color: black;
+            color: white;
+            font-size: 1.5em;
+            border-radius: 10px;
+            padding: 7px;
+            margin-bottom: 10px;}
+
+        .ya{background-color: #F2D06B;}
+        span{color:#F2D06B; }
+
+
+
+
+
+        .right-panel {flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;}
+
+        .diary-box {height: 600px; padding: 20px;}
+
+        .input-bar {display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-top: 1px solid black;
+            justify-content: flex-end;}
+
+        .input-bar p{font-weight: bold;}
+
+
+
+        textarea::placeholder {color: #D3D3D3;font-family: 'IsYun'; font-size: 1.3em; word-break: keep-all;}
+
+
+        .flower {position: fixed;
+          top: 730px;
+          left: 1530px;
+          width: 150px;
+          height: auto;}
+
+        @keyframes spin {from {transform: rotate(0deg);}
+          to {transform: rotate(360deg);}}
+        .spin {animation: spin 3s linear infinite;}
+
+ 
+
+</style>
+
+
+
+</head>
+<body>
+
+    <img id="but" src="flower.png" class="flower">
+    <audio id="song" src="song.mp3" loop></audio>
+
+
+<div class="wrap">
+    <div class="left-panel">
+
+        <h2 class="item">영어일기 효과</h2>
+        <p class="item">
+            영어를 배울 때 우리는 필연적으로 듣기, 읽기 등의 '인풋' 위주로 공부를 하게 된다. 즉 영어 일기를 쓰는 습관을 들이면 내가 뭘 알고 모르는지 알게 되며, 배웠던 내용을 응용할 수 있고, 결론적으로 '아웃풋'의 양을 늘릴 수 있다.
+            <br><br>꾸준히 영어일기를 써서 영어회화에 능숙해져보자.
+        </p>
+
+        <h2 class="item">팁</h2>
+
+        <div class="item">
+            <p class="tip">1. 하루 <span>2~3문장이라도 꾸준히</span> 쓸 것!</p>
+            <p class="tip">2. 오늘 하루의 일을 전부 적기보다는, <span>가장 흥미로웠던 에피소드 하나만</span> 뽑아 쓸 것!</p>
+            <p class="tip">3. 다 쓰면 복붙하여 <span>chatGPT</span>에게 표현과 단어, 문법 등을 검수받기!</p>
+        </div>
+
+
+        <h2 class="item">유용한 영어표현</h2>
+        <p class="item">일상 활동</p>
+        <table class="item">
+          <tr>
+            <td class="ya">Today was a busy day.</td>
+            <td>오늘은 바쁜 하루였다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I spent most of the day..</td>
+            <td>나는 하루 대부분을 ...하며 보냈다.</td>
+          </tr>
+          <tr>
+            <td class="ya">In the morning, I...</td>
+            <td>아침에 나는 ...했다.</td>
+          </tr>
+          <tr>
+            <td class="ya">After work/school, I...</td>
+            <td>일/학교 끝난 후 나는 ...했다.</td>
+          </tr>
+         </table>
+
+        <p class="item">일에 대해</p>
+        <table class="item">
+          <tr>
+            <td class="ya">I had an interesting conversation with...</td>
+            <td>나는 ...와 흥미로운 대화를 나눴다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I learned something new today.</td>
+            <td>오늘 새로운 것을 배웠다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I was able to accomplish a lot today.</td>
+            <td>오늘 나는 많은 일을 해냈다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I made progress on...</td>
+            <td>나는 ...에서 진전을 보였다.</td>
+          </tr>
+         </table>
+
+        <p class="item">감정 표현</p>
+        <table class="item">
+          <tr>
+            <td class="ya">I felt really happy/excited today.</td>
+            <td>오늘 정말 행복했다/신났다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I was a bit tired, but overall, it was a good day.</td>
+            <td>조금 피곤했지만, 전반적으로 좋은 하루였다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I was feeling down earlier, but things got better later.</td>
+            <td>처음에는 기분이 우울했지만, 나중에는 나아졌다.</td>
+          </tr>
+          <tr>
+            <td class="ya">I felt proud of myself when...</td>
+            <td>내가 ...했을 때 자랑스러웠다.</td>
+          </tr>
+         </table>
+    </div>
+
+
+    <div class="right-panel">
+        <div class="diary-box" id="diaryBox">
+        </div>
+        <div class="input-bar">
+            <p>배경색:</p>
+            <input type="color" id="bgColor" value="#ffffff">
+
+            <p>글자색:</p>
+            <input type="color" id="textColor" value="#000000">
+            
+            <p>날짜:</p>
+            <input type="date" id="date">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+    <script>
+
+        let diaryBox = document.getElementById('diaryBox');
+        let bgColor = document.getElementById('bgColor');
+        let textColor = document.getElementById('textColor');
+        let date = document.getElementById('date');
+
+        let diaryTextarea = document.createElement('textarea');
+        diaryTextarea.style.width = '100%';
+        diaryTextarea.style.height = '100%';
+        diaryTextarea.style.resize = 'none';
+        diaryTextarea.style.border = 'none';
+        diaryTextarea.style.outline = 'none';
+        diaryTextarea.style.fontSize = '1.3em';
+        diaryTextarea.style.lineHeight = '1.4';
+        diaryTextarea.placeholder = '오늘 있었던 재밌는 에피소드를 중점적으로 영어일기를 써봅시다. 떠오르지 않는다면, 특정 주제에 관한 영어로 된 글이어도 괜찮습니다.';
+        diaryTextarea.style.backgroundColor = 'transparent'; 
+
+        diaryBox.appendChild(diaryTextarea);
+
+
+
+        bgColor.oninput = function(){
+                console.log("bgColor.value");
+                diaryBox.style.backgroundColor = bgColor.value;}
+
+        textColor.oninput = function(){
+                console.log("textColor.value");
+                diaryTextarea.style.color = textColor.value;}
+
+        date.oninput = function(){
+                diaryTextarea.value += "\n\ndate: " + date.value;} 
+
+
+
+        let playState = false;
+
+        but.onclick = function(){
+        if(!playState){
+            song.play();
+            but.classList.add('spin');
+            playState = true;}
+        else{
+            song.pause();
+            but.classList.remove('spin');
+            playState = false;}}
+
+
+
+    </script>
+</body>
+</html>
